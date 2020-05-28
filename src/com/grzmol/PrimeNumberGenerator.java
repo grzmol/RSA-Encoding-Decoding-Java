@@ -5,20 +5,20 @@ import java.util.List;
 import java.util.Random;
 
 public class PrimeNumberGenerator {
-    private int primeRangeStart = 1;
-    private int primeRangeEnd = 10000;
+    private int PRIME_RANGE_START = 500;
+    private int PRIME_RANGE_END = 10000;
     private final List<Integer> primesList = new ArrayList<Integer>();
 
     private final int PRIME_CHECK_ACCURACY = 10;
 
     /**
      * Konstruktor klasy PrimeNumberGenerator
-     * @param primeRangeStart początek przedziału z którego mają być generowane liczby pierwsze
-     * @param primeRangeEnd koniec przedziału z którego mają być generowane liczby pierwsze
+     * @param PRIME_RANGE_START początek przedziału z którego mają być generowane liczby pierwsze
+     * @param PRIME_RANGE_END koniec przedziału z którego mają być generowane liczby pierwsze
      */
-    public PrimeNumberGenerator(int primeRangeStart, int primeRangeEnd){
-        this.primeRangeStart = primeRangeStart;
-        this.primeRangeEnd = primeRangeEnd;
+    public PrimeNumberGenerator(int PRIME_RANGE_START, int PRIME_RANGE_END){
+        this.PRIME_RANGE_START = PRIME_RANGE_START;
+        this.PRIME_RANGE_END = PRIME_RANGE_END;
     }
 
     /**
@@ -35,7 +35,7 @@ public class PrimeNumberGenerator {
     }
 
     private void generatePrimeNumbers(){
-        for(int i = primeRangeStart; i <= primeRangeEnd; i++){
+        for(int i = PRIME_RANGE_START; i <= PRIME_RANGE_END; i++){
             if(isPrime(i, PRIME_CHECK_ACCURACY)){
                 primesList.add(i);
             }

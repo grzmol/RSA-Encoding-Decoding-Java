@@ -1,5 +1,8 @@
 package com.grzmol;
 
+/**
+ * Klasa ta jest reprezentacją zarówno klucza prywatnego, jak i publicznego
+ */
 public class EncryptionKey {
     private int numA;
     private int numB;

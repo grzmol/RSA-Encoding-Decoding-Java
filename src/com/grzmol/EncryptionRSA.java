@@ -51,6 +51,9 @@ public class EncryptionRSA {
         int fi = Utils.getFi(p, q);
         int n = p*q;
 
+        System.out.println("\n------------------------");
+        System.out.println("p = " + p + " | q = " + q);
+
 
         //pozbywam sie liczb p i q;
         p = q = 0;
@@ -60,6 +63,9 @@ public class EncryptionRSA {
 
         //wyznaczam odwrotne modulo czyli e^(-1) mod fi
         int d = Utils.reverseModulo(e, fi);
+
+        System.out.println("e = " + e + " | d = " + d);
+        System.out.println("------------------------");
 
         //ustawiam klucz publiczny
         setPublicKey(new EncryptionKey(e, n));
